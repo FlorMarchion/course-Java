@@ -1,2 +1,2 @@
-# curso-Java
+# course-Java
 UpSkilling Java Henry
