@@ -1,13 +1,17 @@
-public class Persona {
+public abstract class Persona {
     private String sexo;
     private String nombre;
     private int edad;
     private float altura;
     private int peso;
 
-    Persona(){
-
+    public Persona(){
     }
+
+    public Persona(String nombre){
+        this.nombre = nombre;
+    }
+
     Persona(String sexo, String nombre, int edad, float altura, int peso){
         this.sexo = sexo;
         this.nombre = nombre;
@@ -15,9 +19,8 @@ public class Persona {
         this.altura = altura;
         this.peso = peso;
     }
-    void caminar(){
-        System.out.println("Me estoy moviendo");
-    }
+
+    public abstract void trabajar();
     String escribir(){
         return "texto";
     }

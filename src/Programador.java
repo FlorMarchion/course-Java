@@ -3,7 +3,6 @@ public class Programador extends Persona{
 
     /*Construnctor inicializado*/
 public Programador(){
-
     }
 
     public Programador(String sexo, String nombre, int edad, float altura, int peso, boolean tieneLaptop) {
@@ -11,6 +10,10 @@ public Programador(){
         this.tieneLaptop = tieneLaptop;
     }
 
+    @Override
+    public void trabajar(){
+        System.out.println("Trabaja 4 horas");
+    }
     public boolean isTieneLaptop() {
         return tieneLaptop;
     }
