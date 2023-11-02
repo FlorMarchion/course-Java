@@ -1,20 +1,6 @@
-public class Peon extends Pieza{
+public class Peon extends Figura {
 
-    public Peon(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Peon(String nombre, String color, int valor) {
-        super(nombre, color, valor);
-    }
-
-    @Override
-    public String movimiento() {
-        return "Una casilla al frente";
-    }
-
-    @Override
-    public String ataque() {
-        return "Una casilla en diagonal al frente";
+    public Peon() {
+        super("Rey", "El Peón se mueve una casilla hacia adelante, dos casillas en su primer movimiento y captura en diagonal.", 1);
     }
 }

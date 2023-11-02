@@ -1,18 +1,7 @@
-public class Torre extends Pieza{
+public class Torre extends Figura{
     public Torre() {
+        super("Torre", "Me muevo en línea recta hacia cualquier dirección", 3);
+    }
     }
 
-    public Torre(String nombre, String color, int valor) {
-        super(nombre, color, valor);
-    }
 
-    @Override
-    public String movimiento() {
-        return "Me muevo en línea recta hacia cualquier dirección";
-    }
-
-    @Override
-    public String ataque() {
-        return "Muedo atacar en línea recta hacia cualquier dirección";
-    }
-}
