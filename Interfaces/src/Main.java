@@ -1,3 +1,4 @@
+import exceptions.ProductoNoVendibleException;
 import clases.Producto;
 import filtros.Descartable;
 import filtros.Imperecedero;
@@ -27,23 +28,28 @@ public class Main {
         // Filtrar y mostrar productos que cumplen con los filtros
         System.out.println("\nProductos que cumplen con el filtro 'Vendible':");
         Filtrable vendibleFiltro = new Vendible();
-        filtrarProductos(productos, vendibleFiltro);
+        filtrarProductosConExcepciones(productos, vendibleFiltro);
 
         System.out.println("\nProductos que cumplen con el filtro 'Descartable':");
         Filtrable descartableFiltro = new Descartable();
-        filtrarProductos(productos, descartableFiltro);
+        filtrarProductosConExcepciones(productos, descartableFiltro);
 
         System.out.println("\nProductos que cumplen con el filtro 'Imperecedero':");
         Filtrable imperecederoFiltro = new Imperecedero();
-        filtrarProductos(productos, imperecederoFiltro);
+        filtrarProductosConExcepciones(productos, imperecederoFiltro);
     }
 
-    private static void filtrarProductos(Producto[] productos, Filtrable filtro) {
+    private static void filtrarProductosConExcepciones(Producto[] productos, Filtrable filtro) {
         System.out.println("Productos que cumplen con el filtro '" + filtro.getClass().getSimpleName() + "':");
         for (Producto producto : productos) {
-            if (filtro.cumpleFiltro(producto)) {
-                System.out.println(producto);
+            try{
+                if (filtro.cumpleFiltro(producto)) {
+                    System.out.println(producto);
+                }
+            }catch (ProductoNoVendibleException e){
+                System.out.println("Excepción: " + e.getMessage());
             }
+
         }
     }
 }
