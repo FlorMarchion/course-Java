@@ -12,6 +12,8 @@ public class Main {
             respuesta = scanner.nextLine();
         }while(Objects.equals(respuesta, "si"));
 
+        TaskManager.markTaskAsCompleted();
+
         System.out.println("Desea eliminar una tarea? (Responder si/no): ");
         respuesta = scanner.nextLine();
         if(Objects.equals(respuesta, "si")){
@@ -20,7 +22,7 @@ public class Main {
 
 
        // TaskManager.printTaskList();
-        TaskManager.markTaskAsCompleted();
+
 
 
     };
