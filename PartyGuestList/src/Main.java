@@ -1,19 +1,27 @@
-import java.util.HashSet;
+
 import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
 
         // Crear la lista de invitados
-        Set<Invitado> listaDeInvitados = PartyGuestList.createInitialGuestList();
+       Set<Invitado> listaDeInvitados = PartyGuestList.createInitialGuestList();
 
         // Mostrar lista de invitados
-        PartyGuestList.showGuestList(listaDeInvitados);
+       PartyGuestList.showGuestList(listaDeInvitados);
 
         // Agregar un nuevo invitado
-        PartyGuestList.addGuest(listaDeInvitados);
+       PartyGuestList.addGuest(listaDeInvitados);
 
-        // Mostrar la lista actualizada
+        //Eliminar un invitado de la lista
+        PartyGuestList.removeGuest(listaDeInvitados);
+
         PartyGuestList.showGuestList(listaDeInvitados);
+
+        //Buscar invitado por nombre en la lista
+        PartyGuestList.isGuestInList(listaDeInvitados);
+
+        //Total de invitados
+        PartyGuestList.getTotalGuests(listaDeInvitados);
     }
 }
