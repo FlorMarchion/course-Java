@@ -25,5 +25,8 @@ public class Main {
 
         //Buscar un calificación en el registro
         StudentRecord.searchCalificationByStudent();
+
+        //Listado de nombres
+        StudentRecord.nameStudents();
     }
 }

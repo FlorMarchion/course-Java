@@ -107,4 +107,10 @@ public class StudentRecord {
             System.out.println("No existen estudiantes con calificación " + calificacion + " en la lista");
         }
     }
+
+    public static void nameStudents(){
+        Map<String, Integer> listadoDeAlumnos = createInitialStudentList();
+        Set<String> names = listadoDeAlumnos.keySet();
+        System.out.println("Listado de nombres: " + names);
+    }
 }
