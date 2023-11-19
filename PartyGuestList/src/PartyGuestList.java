@@ -8,7 +8,7 @@ public class PartyGuestList {
         Set<Invitado> listaDeInvitados = new HashSet<Invitado>();
         listaDeInvitados.add(new Invitado("Nicolás", "Sanchez", 20));
         listaDeInvitados.add(new Invitado("Santiago", "González", 25));
-        listaDeInvitados.add(new Invitado("Sofia", "Altamirano", 31));
+        listaDeInvitados.add(new Invitado("Sofía", "Altamirano", 31));
         listaDeInvitados.add(new Invitado("Andrés", "Gutierres", 18));
         listaDeInvitados.add(new Invitado("Ignasio", "Ponce", 22));
         listaDeInvitados.add(new Invitado("Camila", "Álvarez", 27));
